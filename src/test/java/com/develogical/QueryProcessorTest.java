@@ -24,4 +24,17 @@ public class QueryProcessorTest {
   public void knowsAboutName() throws Exception {
     assertThat(queryProcessor.process("What is your name?"), containsString("Michael"));
   }
+
+
+  @Test
+  public void knowsAboutlargest() throws Exception {
+    assertThat(queryProcessor.process("Which of the following numbers is the largest: 27, 4, 91?"), containsString("91"));
+  }
+
+
+  @Test
+  public void knowsAboutPlus() throws Exception {
+    assertThat(queryProcessor.process("What is 44 plus 14?"), containsString("58"));
+  }
+  
 }
